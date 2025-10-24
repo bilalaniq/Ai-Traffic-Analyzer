@@ -1,0 +1,14 @@
+# Ignore Python virtual environment
+venv/
+
+# Ignore pickle model files
+*.pkl
+
+# Ignore raw CSVs
+*.csv
+
+# Ignore IDE/editor files
+__pycache__/
+*.pyc
+*.pyo
+*.DS_Store
