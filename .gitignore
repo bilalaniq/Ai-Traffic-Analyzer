@@ -12,3 +12,45 @@ __pycache__/
 *.pyc
 *.pyo
 *.DS_Store
+
+
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+
+# IDEs
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# jNetPcap native binaries
+jnetpcap/win/jnetpcap-1.4.r1425/*.dll
+jnetpcap/linux/jnetpcap-1.4.r1425/*.so
+jnetpcap/linux/jnetpcap-1.4.r1425/*.dylib
+
+# Distribution zips
+build/distributions/
