@@ -94,12 +94,17 @@ plt.xticks(rotation=45, ha='right')
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 
 # Annotate bar heights
-for p in ax.patches:
+for p in ax.patches:     # ax.patches gives a list of all the bars in the chart.
     ax.annotate(f'{int(p.get_height()):,}', 
                 (p.get_x() + p.get_width()/2., p.get_height()), 
                 ha='center', va='bottom', fontsize=8, rotation=90)
+    
+    # f'{int(p.get_height()):,}' → formats the number with commas, e.g., 10000 → 10,000
+    # (p.get_x() + p.get_width()/2., p.get_height()) → x and y coordinates for the text:
+    # ha='center' → horizontal alignment at center
+    # va='bottom' → vertical alignment at the bottom of the text (so it sits just above the bar)
 
-plt.tight_layout()
+plt.tight_layout()  # Automatically adjusts spacing in the figure so labels, titles, and bars don’t overlap.
 plt.show()
 
 # ===============================
