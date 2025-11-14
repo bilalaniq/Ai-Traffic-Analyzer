@@ -8,16 +8,23 @@ A Python-based network traffic analyzer for intrusion detection using machine le
 
 ```
 Traffic-Analyzer/
-├── BinaryClassification.py      # Script for binary classification (Normal vs Attack)
-├── check.py                     # Script to inspect dataset and view statistics
-├── combined_cicids2017.csv      # Merged dataset from all CSV files
-├── combine.py                   # Script to combine all CSVs into one dataset
-├── MachineLearningCVE/          # Folder containing original CSV dataset files
-├── network_traffic_data.csv     # Optional additional dataset
-├── requirements.txt             # requirements.txt file containing all the requirements
-├── README.md                    # This file
-└── ...
-
+├── BinaryClassification.py           # Script for binary classification (Normal vs Attack)
+├── MultiClassification.py            # Script for multi-class classification (all traffic types)
+├── check.py                          # Script to inspect dataset and view statistics
+├── combine.py                         # Script to combine all CSVs into one dataset
+├── combined_cicids2017.csv           # Merged dataset from all CSV files
+├── label_encoder.pkl                  # Label encoder for binary classification
+├── scaler.pkl                         # Scaler for binary classification
+├── traffic_detector_binary.pkl        # Trained binary classification model
+├── label_encoder_multi.pkl            # Label encoder for multi-class classification
+├── scaler_multi.pkl                    # Scaler for multi-class classification
+├── traffic_detector_multiclass.pkl    # Trained multi-class classification model
+├── CICFlowMeter-4.0/                  # Folder for CICFlowMeter tool
+├── MachineLearningCVE/                # Folder containing original CSV dataset files
+├── img/                               # Folder containing images for reports or visualizations
+├── requirements.txt                   # requirements.txt file containing all dependencies
+├── README.md                          # Project documentation
+└── venv/                              # Python virtual environment
 ```
 ---
 
@@ -78,7 +85,17 @@ here you can see we got an `99.85 %` Accuracy
 
 ## multi-class classification
 
-> To do
+Run the script:
+
+```bash
+python MultiClassification.py
+```
+
+Trains a **RandomForestClassifier** to classify traffic and saves the model, label encoder, and scaler for later use.
+
+![third](./img/third.png)
+
+here you can see we got an `99.82 %` Accuracy
 
 ---
 

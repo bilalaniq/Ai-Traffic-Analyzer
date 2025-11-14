@@ -18,7 +18,7 @@ print("\n📈 Class counts:")
 print(df["Label"].value_counts())
 
 print("\n📊 Class distribution (percentages):")
-print(df["Label"].value_counts(normalize=True) * 100)
+print(df["Label"].value_counts(normalize=True) * 100) # normalize=True = gives the fraction (between 0 and 1) of the total.
 
 plt.figure(figsize=(8,4))
 df["Label"].value_counts().plot(kind='bar', color=['green', 'red', 'blue', 'orange', 'purple', 'brown'])
